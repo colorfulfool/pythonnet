@@ -824,6 +824,14 @@ namespace Python.Runtime {
     }
 
 
+    public string ToByteString() {
+        IntPtr strval = Runtime.PyObject_Str(obj);
+        string result = Runtime.GetManagedString(strval);
+        Runtime.Decref(strval);
+        return result;
+    }
+
+
     /// <summary>
     /// Equals Method
     /// </summary>
