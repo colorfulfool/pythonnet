@@ -117,6 +117,19 @@ namespace Python.Runtime {
         }
 
 
+        /// <summary>
+        /// ToDouble Method
+        /// </summary>
+        ///
+        /// <remarks>
+        /// Return the value of the Python float object as an double.
+        /// </remarks>
+
+        public double ToDouble() {
+            return Runtime.PyFloat_AsDouble(obj);
+        }
+
+
     }
 
 }
